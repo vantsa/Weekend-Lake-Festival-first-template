@@ -1,0 +1,252 @@
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Acumin";
+  src: url("/font/AcuminVariableConcept.otf")
+  format("opentype");
+}
+@font-face {
+  font-family: "Acumin";
+  font-weight: bold;
+  src: url("/font/AcuminVariableConcept.otf")
+  format("opentype");
+}
+html{ 
+    background-image: linear-gradient(to right, #01395C, #CCA6C8);
+    scroll-behavior: smooth;
+    margin : 0 auto;
+}
+body{
+  margin-top : 150px;
+}
+#kapcsolat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom : 50px;
+}
+.kapcsolat-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: clamp(100px, 85%, 1000px);
+    margin: 80px 50px;
+    box-sizing: border-box;
+}
+h2{
+  color : white;
+  font-size: 44px;
+  border-bottom: 1px solid #CCA6C8;
+  margin-left : 200px;
+  margin-top : 50px;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 2px;
+  font-family: Acumin;
+}
+h3{
+    font-family: "Acumin";
+    color: white;
+    font-size: clamp(30px, 6vw, 52px);
+    letter-spacing: 2px;
+    text-align: center;
+    transform: scale(.95, 1);
+    margin-top : 0px;
+  }
+.kapcsolat-bal img{
+    width : 55px;
+    height : 55px;
+    margin : 20px;
+    transition : 0.3s;
+}
+.kapcsolat-bal img:hover {
+    transform: scale(1.1);
+}
+.kapcsolat .links{
+  margin-top : 100px;
+}
+.kapcsolat-bal, .kapcsolat-jobb{
+    width: 50%;
+    padding: 8% 4% 8% 4%;
+}
+.kapcsolat-bal {
+    background-image: url("/img/ht.png");
+    border-radius: 10px 0px 0px 10px;
+}
+.kapcsolat-box .kepek{
+  display: flex;
+  flex-wrap: wrap;
+  width: clamp(100px, 90%, 1000px);
+  margin: 30px 50px;
+}
+.links{
+    padding-top : 75px;
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom : 35px;
+}
+.kapcsolat-jobb{
+    background-color: #A3A1C0;
+    border-radius: 0 10px 10px 0;
+}
+.form-item{
+    position : relative;
+}
+label, input, textarea {
+    font-family: 'Poppins', sans-serif;
+    resize : none;
+}
+label {
+    position: absolute;
+    top: 10px;
+    left: 2%;
+    color: #999;
+    font-size: clamp(14px, 1.5vw, 18px);
+    font-style: italic;
+    pointer-events: none;
+} 
+input, textarea {
+    width: 100%;
+    outline: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    padding: 12px;
+    font-size: clamp(15px, 1.5vw, 18px);
+    font-style : italic;
+}
+.textarea{
+    height: 100px;
+}
+input:focus+label, 
+input:valid+label, 
+textarea:focus+label, 
+textarea:valid+label {
+  font-size: clamp(13px, 1.3vw, 16px);
+  color: #595959;
+  top: -25px;
+  transition: all .225s ease;
+}
+.submit{
+    background-color: #ec799f;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: clamp(22px, 1.6vw, 18px);
+    display: block;
+    padding: 12px 20px;
+    margin: 2px auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+    filter: drop-shadow(2px 2px 3px #0003);
+}
+.submit:hover {
+    transform: scale(1.1);
+}
+.submit:active {
+    transform: scale(1.1);
+}
+h4{
+  font-family: "Acumin";
+  color: white;
+  font-size: 1.7em;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: scale(.95, 1);
+  margin-top : 0px;
+  font-style: italic;
+  margin-bottom : 35px;
+}
+h5{
+  font-family: sans-serif;
+  color: white;
+  font-size: 1.35em;
+  letter-spacing: 2px;
+  transform: scale(.95, 1);
+  margin-top : 0px;
+  margin-bottom : 20px;
+}
+.elerhetoseg p{
+  font-family: sans-serif;
+  color : white;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-left : 15px;
+  line-height: 150%;
+}
+.kapcsolat-bal p{
+  font-family: "Acumin";
+  color : white;
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 150%;
+  text-align: center;
+}
+.eadat{
+  margin-left : 35px;
+}
+@media screen and (max-width : 1400px){
+  h2{
+    margin-left : 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+}
+@media screen and (max-width : 1024px){
+  #kapcsolat{
+    flex-wrap: wrap;
+  }
+  .elerhetoseg{
+    margin-top: 100px;
+  }
+}
+@media only screen and (max-width: 800px) {
+    .kapcsolat-bal, .kapcsolat-jobb{
+      width: 100%;
+    }
+    
+    .kapcsolat-bal{
+      border-radius: 10px 10px 0 0;
+    }
+    
+    .kapcsolat-jobb{
+      border-radius: 0 0 10px 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    h2 {
+      font-size: clamp(40px, 10vw, 60px);
+    }
+} 
+@media only screen and (max-width: 565px) {
+  body{
+    margin-top : 200px;
+  }
+}
+@media only screen and (max-width: 400px) {
+    h2 {
+      font-size: clamp(30px, 12vw, 60px);
+    }
+    
+    .links {
+      padding-top: 30px;
+    }   
+    .link img {
+      width: 38px;
+      height: 38px;
+    }
+}
+@media only screen and (max-width: 400px) {
+  .kapcsolat-box {
+    width: 95%;
+    margin: 8% 5%;
+  }
+}
+  

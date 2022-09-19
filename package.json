@@ -1,0 +1,17 @@
+{
+  "name": "weekend-lake-festival",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.3"
+  },
+  "dependencies": {
+    "hbs": "^4.2.0"
+  }
+}

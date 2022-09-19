@@ -1,0 +1,205 @@
+*{
+  margin : 0;
+  padding : 0;
+}
+@font-face {
+  font-family: "Acumin";
+  src: url("/font/AcuminVariableConcept.otf")
+  format("opentype");
+}
+@font-face {
+  font-family: "Acumin";
+  font-weight: bold;
+  src: url("/font/AcuminVariableConcept.otf")
+  format("opentype");
+}
+html { 
+    background-image: linear-gradient(to right, #01395C, #CCA6C8);
+    scroll-behavior: smooth;
+    margin : 0 auto;
+    overflow-x : hidden;
+}
+body{
+  margin-top : 200px;
+}
+h2{
+  color : white;
+  font-size: 44px;
+  border-bottom: 1px solid #CCA6C8;
+  margin-left : 200px;
+  margin-top : 50px;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 2px;
+  font-family: Acumin;
+}
+.dj{
+  color : white;
+  font-size: 34px;
+  border-bottom: 1px solid #CCA6C8;
+  margin-left : 200px;
+  margin-top : 50px;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 2px;
+  font-family: Acumin;
+}
+.galeria, .galeria2{
+    margin : 0 auto;
+    margin : 100px;
+    margin-top : 50px;
+}
+.container{
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  margin : 0 auto;
+  flex-wrap : wrap;
+  margin-bottom : 100px;
+}
+.container .box{
+  display : grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  column-gap: 50px;
+  row-gap : 100px;
+  width : 80%;
+}
+.galeria2 .box{
+  display : grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 50px;
+  row-gap : 100px;
+  width : 80%;
+}
+.container .box img{
+  width : 100%;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+  transition: 0.3s;
+  cursor : pointer;
+}
+.container .box img:hover{
+  opacity: 0.5;
+}
+h3{
+  color : white;
+  padding : 20px;
+  font-family: "Acumin";
+  display: inline-block;
+}
+.container p{
+  color : white;
+  padding : 20px;
+  font-family: "Acumin";
+}
+.elem{
+  background-color : #01395C;
+  transition: 1s;
+  border-radius : 5px;
+}
+.elem img{
+  border-radius: 5px 5px 0px 0px;
+}
+.elem:hover{
+  transform : scale(1.1)
+}
+.popup-video{
+  position : fixed;
+  top : 0;
+  left : 0;
+  background: rgba(0,0,0,.9);
+  height: 100%;
+  width: 100%;
+  z-index : 100;
+  display : none;
+}
+.popup-video iframe{
+  position : absolute;
+  top : 50%;
+  left : 50%;
+  transform : translate(-50%, -50%);
+  width : 60%;
+  height : 60%;
+}
+.loader{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color : #01395C;
+  top : 0;
+  left : 0;
+  position: fixed;
+  z-index: 99999;
+  transition: all .4s ease;
+}
+.bounce {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: absolute;
+  margin : auto;
+  top : 0;
+  bottom : 0;
+  left : 0;
+  right : 0;
+}
+
+.bounce div {
+  width: 25px;
+  height: 25px;
+  background: #cda8c9;
+  border-radius: 50%;
+  animation:bouncing 0.5s 
+    cubic-bezier(.19, .57, .3, .98) infinite alternate;
+}
+
+.bounce div:nth-child(2) {
+ animation-delay: .1s;
+ opacity: .8;
+}
+
+.bounce div:nth-child(3) {
+  animation-delay: .2s;
+  opacity: .65;
+}
+
+.bounce div:nth-child(4) {
+  animation-delay: .3s;
+  opacity: .5;
+}
+@keyframes bouncing {
+  from{
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+@media screen and (max-width : 1400px){
+  h2, .dj{
+    margin-left : 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 4vw;
+    border : none;
+  }
+}
+@media screen and (max-width :600px){
+  .container .box{
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
+  margin : 0 auto;
+  row-gap : 50px;
+}
+h2, .dj{
+  font-size: 7vw;
+}
+.popup-video iframe{
+  position : absolute;
+  top : 50%;
+  left : 50%;
+  transform : translate(-50%, -50%);
+  width : 100%;
+}
+}

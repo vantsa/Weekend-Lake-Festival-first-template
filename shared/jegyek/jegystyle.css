@@ -1,0 +1,218 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+@font-face {
+    font-family: "Acumin";
+    src: url("/font/AcuminVariableConcept.otf")
+    format("opentype");
+}
+@font-face {
+    font-family: "Acumin";
+    font-weight: bold;
+    src: url("/font/AcuminVariableConcept.otf")
+    format("opentype");
+}
+html { 
+      background-image: linear-gradient(to right, #01395C, #CCA6C8);
+      scroll-behavior: smooth;
+      margin : 0 auto;
+}
+body{
+    margin-top : 200px;  
+}
+h2{
+    color : white;
+    font-size: 54px;
+    margin-top : 50px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-family: Acumin;
+    text-align : center;
+    padding : 10px;
+    border-radius : 5px;
+    background-image: url('/jegyek/szhatter.png');
+    padding : 50px;
+    background-size: 100% 95%;
+}
+h2 .shop{
+    margin : 0px;
+}
+.box3 h3{
+    color : white;
+    font-size : 3.5em;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: "Acumin";
+}
+.box2 h3{
+    color : white;
+    font-size : 3.5em;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: "Acumin";
+    text-align: center;
+}
+.container{
+    display : flex;
+    justify-content: space-between;
+    width : 80%;
+    margin : 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top : 100px;
+}
+.box{
+    width : 44%;
+    padding : 5px;
+    text-align : center;
+}
+.container .box2{
+    text-align : center;
+}
+.box3{
+    width : 30%;
+    text-align: center;
+    background-image: url('/jegyek/szhatter.png');
+    padding : 50px;
+    background-size: 100% 95%;
+}
+.box3 h3{
+    margin-top : -10px;
+    margin-bottom : 30px;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    font-family: Acumin;
+    color : #01395C;
+    background-color : #CCA6C8;
+    font-size: 18px;
+    padding : 7px 25px 3px 20px;
+    border-radius : 0.5em;
+    margin-top: -30px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+table{
+    margin : auto;
+    min-width: 200px;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius : 0.5em;
+    margin-bottom : 100px;
+}
+table tr{
+    background-color : #054869;
+    color : white;
+}
+table tr:first-child{
+    color : white;
+    background-color : #01395C;
+    border-bottom : none;
+}
+th{
+    font-size: 2.5em;
+    border-radius : 0em 0.5em 0em 0em;
+}
+.left{
+    border-radius : 0.5em 0em 0em 0em;
+}
+td{
+    font-size: 1.5em;
+}
+table th, table td {
+  padding: 1.1em 2em;
+  font-family: sans-serif;
+  text-align: center;
+}
+.lleft{
+    border-radius: 0em 0em 0em 0.5em;
+}
+.rright{
+    border-radius: 0em 0em 0.5em 0em;
+}
+.box i{
+    color : white;
+    margin-right : 0.625em;
+    font-size : .6em;
+}
+@media screen and (max-width: 1400px){
+    .container{
+        margin : 0 auto;
+    }
+    .box3{
+        width : 90%;
+    }
+    .box2{
+        width: 100%;
+        order : 2;
+        text-align: center;
+        padding : 50px;
+        margin : 0 auto;
+    }
+    .box{
+        width: 100%;
+        margin : 0 auto;
+        order : 3;
+    }
+    h2, h3{
+        margin-left : 20px;
+        margin-right : 20px;
+        text-align : center;
+      }
+}
+@media screen and (max-width: 800px) {
+    body{
+        margin-top : 275px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    .box2 h3{
+        font-size: 24px;
+    }
+.container{
+    width: 100%;
+}
+table {
+    border-spacing : 0;
+}
+table th {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+} 
+table tr {
+    display: block;
+    margin-bottom: .625em;
+}  
+table td {
+    display: block;
+    font-size: 1em;
+    text-align: left;
+    margin-left : 10px;
+} 
+table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+}
+.box i{
+    margin-left : 10px;
+    margin-right : 10px;
+}
+}

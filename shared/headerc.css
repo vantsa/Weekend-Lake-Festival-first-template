@@ -1,0 +1,240 @@
+.header{
+    margin : 0 auto;
+    display : flex;
+    justify-content: space-around;
+    align-items : center;
+    margin-top : 20px;
+    position : fixed;
+    top : 0;
+    width: 100%;
+    -webkit-transition: all ease-in-out .5s;
+    -moz-transition: all ease-in-out .5s;
+    -o-transition: all ease-in-out .5s;
+    transition: all ease-in-out .5s;
+    flex-wrap: wrap;
+    position: fixed;
+}
+#timer {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(8px, 0.7em, 24px);
+    letter-spacing: 5px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+}
+.days, .hours, .minutes, .seconds {
+    display: inline-block;
+    padding: 15px;
+    width: 150px;
+    border-radius: 10px;
+    background: #CEA7C8;
+    flex-wrap: nowrap;
+    margin-right: 5px;
+    flex : 1 1 100px;
+}
+.numbers {
+    font-family: sans-serif;
+    color: white;
+    font-size: clamp(25px, 2.25vw, 48px);
+}
+.navbar{
+    display : flex;
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+.mnavbar
+{
+    margin-top : 50px;
+    display : flex;
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    flex-direction: column;
+}
+.navbar *, .mnavbar *{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+.navbar li, .mnavbar li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0.7em 0.6em;
+    padding: 0;
+}
+.navbar a, .mnavbar a{
+    padding: 0.25em 0;
+    color: white;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+}
+.navbar a:before,
+.navbar a:after {
+    height: 3px;
+    position: absolute;
+    content: '';
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    background-color: #CCA6C8;
+    width: 0;
+}
+.mnavbar a:before,
+.mnavbar a:after {
+    height: 3px;
+    position: absolute;
+    content: '';
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    background-color: #CCA6C8;
+    width: 0;
+}
+.navbar a:before, .mnavbar a:before {
+    top: 0;
+    left: 0;
+}
+.navbar a:after, .mnavbar a:after {
+    bottom: 0;
+    right: 0;
+}
+.navbar a:hover,
+.navbar .current a {
+    color: #ffffff;
+}
+.mnavbar a:hover,
+.mnavbar .current a {
+    color: #ffffff;
+}
+  .navbar a:hover:before,
+  .navbar .current a:before,
+  .navbar a:hover:after,
+  .navbar .current a:after {
+    width: 100%;
+}
+.mnavbar a:hover:before,
+.mnavbar .current a:before,
+.mnavbar a:hover:after,
+.mnavbar .current a:after {
+  width: 100%;
+}
+.header .logo{
+    width: 8%;
+}
+.hamburger{
+    display : none;
+    cursor: pointer;
+    position: fixed;
+    top : 30px;
+    right : -35px;
+    padding : 9px 50px 9px 15px;
+    background-color : #01395C;
+    border-radius: 40px;
+}
+.bar{
+    display : block;
+    width : 25px;
+    height : 3px;
+    margin : 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.mobilemenu{
+    WIDTH: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left : 0;
+    z-index: 500;
+    transform: translateX(150%);
+    transition: all 0.4s;
+    background: rgba(0,0,0,.9);
+}
+.close2{
+    position: absolute;
+    right: 42px;
+    top: 42px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    color : white;
+    font-weight: 900;
+  }
+.close2:before, .close2:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 5px;
+  background-color: white;
+}
+.close2:before {
+  transform: rotate(45deg);
+}
+.close2:after {
+  transform: rotate(-45deg);
+}
+.active{
+    background-color : #01395C;
+    margin : 0 auto;
+    z-index : 50;
+    padding-bottom : 8px;
+    padding-top : 5px;
+}
+@media (max-width: 1700px) {
+    .logo{
+      display: none;
+    }
+}
+@media screen and (max-width: 1520px)
+{
+  .timercontainer{
+    margin : 0 auto;
+  }
+}
+@media(max-width: 768px)
+{
+    .numbers{
+        font-size: 18x;
+    }
+    #timer{
+        font-size: 11px;
+    }
+    .days, .hours, .minutes, .seconds {
+        padding : 5px;
+        width : 110px;
+    }
+    .timercontainer{
+        margin-right : 50px;
+        margin-left : 50px;
+    }
+    .hamburger{
+        display: block;
+    }
+    .navbar{
+        display: none;
+    }
+    .navlink{
+        margin : 16px 0;
+    }
+    .navbar .active2{
+        left : 0;
+    }
+
+}
+@media screen and (max-width: 740px)
+{
+  .days, .hours, .minutes, .seconds{
+    margin-bottom : 5px;
+  }
+}

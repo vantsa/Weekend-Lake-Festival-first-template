@@ -1,0 +1,124 @@
+.footer{
+    background-color : #01395C;
+    height : auto;
+    margin : 0 auto;
+  }
+  .fcontent{
+    width : 70%;
+    margin : 0 auto;
+    display : flex;
+    justify-content : space-around;
+    flex-wrap : wrap;
+  }
+  .fcontent span{
+    color : white;
+    text-transform: uppercase;
+    font-family: "Acumin";
+    font-size: 20px;
+    display : inline-block;
+    margin-right: 20px;
+    font-weight: 900;
+    margin-top : 30px;
+    margin-bottom : 25px;
+  }
+  .fcontent .fbox .txt{
+    margin-top : 25px;
+  }
+  .fcontent .fbox .me{
+    color : white;
+    text-transform: uppercase;
+    font-family: "Acumin";
+    font-size: 12px;
+    display: block;
+    margin-right: 20px;
+    font-weight: 300;
+    margin-top : -20px;
+    margin-bottom : 0px;
+    text-align: center;
+  }
+  .footer .alsokacsa{
+    width: clamp(100px, 7%, 300px);
+    z-index : 15;
+    margin-left : 65px;
+    float : left;
+    margin-top : -35px;
+  }
+  .fbox{
+    margin-left: -120px;
+  }
+  .fbox2{
+    margin-left : -70px;
+  }
+  .fcontent .fbox2 a{
+    padding : 10px 15px;
+    transition : 0.8s;
+  }
+  .fcontent .fbox2 a :hover{
+    transform : scale(1.2);
+  }
+  .icon{ 
+    color : white;
+    animation: social 1s ease-in-out infinite alternate;
+  }
+  @keyframes social {
+    0%{
+      text-shadow: 0 0 10px #ff1177,
+      0 0 20px  #FF00AA, 0 0 30px #285AEB
+      }
+    100%{
+      text-shadow: 0 0 5px #ff1177,
+      0 0 10px #FF00AA, 0 0 15px #285AEB
+    }
+  }
+  ::-webkit-scrollbar{
+    width : 15px;
+  }
+  ::-webkit-scrollbar-track{
+    background : #CCA6C8;
+    border-radius: 0px;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius: 0px;
+    background : #01395C;
+  }
+  @media screen and (max-width: 1000px){
+    .fbox, .fbox2{
+      margin : 0 auto;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 768px)
+  {
+    .fbox2{
+      margin-left: 45px;
+    }
+
+  }
+  @media screen and (max-width: 550px){
+    .fcontent .fbox span, .fcontent .fbox2 span {
+      font-size : 4vw;
+      padding : 0;
+      margin : 15px 0px;
+      margin-right: 15px;
+    }
+    .fcontent .fbox2 .icon{
+      font-size: 8vw;
+    }
+    .fcontent .fbox2{
+      margin-left : 0px;
+    }
+    .fcontent .fbox .me{
+      margin-top : 1px;
+      margin-bottom : 2px;
+    }
+}
+@media screen and (min-width: 1921px) {
+    .alsokacsa{
+      display: none;
+    }
+}
+@media screen and (max-width: 350px){
+  .fcontent .fbox2{
+    margin-left : -20px;
+  }
+}
