@@ -12,9 +12,6 @@
     "express": "^4.17.3"
   },
   "dependencies": {
-    "hbs": "^4.2.0",
-    "express":"*",
-    "body-parser":"*",
-    "bcrypt": "^0.8.5"
+    "hbs": "^4.2.0"
   }
 }
