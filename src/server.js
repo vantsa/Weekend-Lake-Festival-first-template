@@ -4,7 +4,7 @@ var hbs = require("hbs");
 
 class Server {
     constructor(){
-        this.port = process.env.PORT || 18444;
+        this.port = 18444;
         this.VIEW_PATH = path.join(__dirname, "../view");
         this.PARTIAL_PATH = path.join(__dirname, "../partials");
 
